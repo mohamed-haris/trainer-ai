@@ -12,7 +12,6 @@ import {
   ResponsiveContainer 
 } from "recharts";
 
-// Mock data for the chart
 const performanceData = [
   { month: "Jan", evaluation: 65, training: 55, proficiency: 60 },
   { month: "Feb", evaluation: 68, training: 59, proficiency: 62 },

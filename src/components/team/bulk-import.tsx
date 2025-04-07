@@ -47,7 +47,6 @@ export function BulkImport() {
     
     setProcessing(true);
     
-    // Simulate processing delay
     setTimeout(() => {
       setProcessing(false);
       setHasUploaded(true);

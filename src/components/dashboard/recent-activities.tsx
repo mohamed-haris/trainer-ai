@@ -27,7 +27,6 @@ export function RecentActivities() {
     })),
   ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-  // Get only the 5 most recent activities
   const recentActivities = activities.slice(0, 5);
 
   return (

@@ -24,7 +24,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function BillingSettings() {
-  const currentPlan = pricingPlans[1]; // Growth plan
+  const currentPlan = pricingPlans[1];
   const usageData = {
     ai_minutes: {
       used: 45,

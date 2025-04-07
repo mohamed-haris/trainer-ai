@@ -26,7 +26,6 @@ export function AppearanceSettings() {
   const handleSave = () => {
     setIsLoading(true);
     
-    // Simulate API call delay
     setTimeout(() => {
       toast({
         title: "Appearance settings updated",

@@ -32,7 +32,6 @@ export function ConversationInterface({
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
-    // Check if microphone is available
     navigator.mediaDevices
       .getUserMedia({ audio: true })
       .then(() => {
@@ -42,7 +41,6 @@ export function ConversationInterface({
         setIsMicAvailable(false);
       });
 
-    // If no initial messages, generate a greeting from the agent
     if (initialMessages.length === 0) {
       const greeting = generateAgentGreeting();
       setMessages([greeting]);
@@ -50,11 +48,9 @@ export function ConversationInterface({
   }, []);
 
   useEffect(() => {
-    // Scroll to bottom when messages change
     scrollToBottom();
   }, [messages]);
 
-  // Mock function to generate agent greeting based on agent type
   const generateAgentGreeting = (): Message => {
     let content = "";
     if (agent.type === "training") {
@@ -81,13 +77,11 @@ export function ConversationInterface({
   const handleToggleRecording = () => {
     if (!isMicAvailable) return;
     setIsRecording(!isRecording);
-    // In a real app, this would start/stop speech recognition
   };
 
   const handleSendMessage = async () => {
     if (input.trim() === "") return;
 
-    // Add user message
     const userMessage: Message = {
       id: `msg_${Date.now()}`,
       sender: "user",
@@ -100,20 +94,16 @@ export function ConversationInterface({
     setInput("");
     setIsTyping(true);
 
-    // Focus back on input
     inputRef.current?.focus();
 
-    // Simulate agent typing delay
     setTimeout(() => {
       const agentResponse = generateAgentResponse(input);
       setMessages((prev) => [...prev, agentResponse]);
       setIsTyping(false);
-    }, 1500 + Math.random() * 1500); // Random delay between 1.5-3s
+    }, 1500 + Math.random() * 1500);
   };
 
-  // Mock function to generate agent responses
   const generateAgentResponse = (userInput: string): Message => {
-    // This would be replaced with actual AI responses in production
     const responses = [
       "That's a great point. Can you tell me more about that?",
       "I understand. In this situation, I'd recommend focusing on the customer's needs first.",
@@ -125,14 +115,11 @@ export function ConversationInterface({
 
     let responseText = "";
 
-    // If user input contains a question mark, treat it as a question
     if (userInput.includes("?")) {
       responseText = "That's a great question. " + responses[Math.floor(Math.random() * responses.length)];
     } else if (userInput.length < 20) {
-      // Short input gets a prompt for more details
       responseText = "Could you elaborate a bit more on that? " + responses[0];
     } else {
-      // Regular response
       responseText = responses[Math.floor(Math.random() * responses.length)];
     }
 

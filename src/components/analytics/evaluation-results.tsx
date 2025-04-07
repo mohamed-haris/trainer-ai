@@ -15,7 +15,6 @@ import {
   Radar
 } from "recharts";
 
-// Mock data for evaluation results distribution
 const resultDistribution = [
   { name: "Excellent (90-100%)", value: 20 },
   { name: "Good (75-89%)", value: 40 },
@@ -25,7 +24,6 @@ const resultDistribution = [
 
 const COLORS = ["#22c55e", "#3b82f6", "#eab308", "#ef4444"];
 
-// Mock data for skill assessment
 const skillData = [
   { subject: "Product Knowledge", A: 85, B: 70 },
   { subject: "Communication", A: 80, B: 65 },

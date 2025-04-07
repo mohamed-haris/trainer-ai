@@ -5,7 +5,6 @@ import { evaluationSessions } from "@/lib/mockData";
 import { format } from "date-fns";
 
 export function UpcomingEvaluations() {
-  // Filter for pending evaluations
   const pendingEvaluations = evaluationSessions
     .filter((session) => session.status === "pending")
     .slice(0, 3);

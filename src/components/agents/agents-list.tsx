@@ -39,7 +39,6 @@ export function AgentsList() {
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const { toast } = useToast();
   
-  // Filter agents based on selected industry and type
   const filteredAgents = agents.filter((agent) => {
     if (selectedIndustry && agent.industry !== selectedIndustry) {
       return false;
@@ -51,7 +50,6 @@ export function AgentsList() {
   });
   
   const handleDelete = (id: string) => {
-    // In a real app, this would call an API to delete the agent
     toast({
       title: "Agent deleted",
       description: "The agent has been successfully deleted.",

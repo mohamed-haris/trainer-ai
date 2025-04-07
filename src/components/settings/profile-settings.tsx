@@ -53,7 +53,6 @@ export function ProfileSettings() {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  // Default values from the current user
   const defaultValues: Partial<ProfileFormValues> = {
     name: currentUser.name,
     email: currentUser.email,
@@ -70,7 +69,6 @@ export function ProfileSettings() {
   function onSubmit(data: ProfileFormValues) {
     setIsLoading(true);
     
-    // Simulate API call delay
     setTimeout(() => {
       toast({
         title: "Profile updated",

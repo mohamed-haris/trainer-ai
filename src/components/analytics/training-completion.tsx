@@ -13,7 +13,6 @@ import {
 } from "recharts";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-// Mock data for training completion by module
 const moduleData = [
   { name: "Onboarding", completion: 92 },
   { name: "Product Knowledge", completion: 78 },
@@ -23,7 +22,6 @@ const moduleData = [
   { name: "Technical Skills", completion: 60 },
 ];
 
-// Mock data for training time spent by category
 const timeData = [
   { name: "Onboarding", hours: 12 },
   { name: "Product Knowledge", hours: 28 },
@@ -134,7 +132,6 @@ export function TrainingCompletion() {
   );
 }
 
-// Helper component for metrics
 function MetricCard({ title, value, subtitle, change, changeLabel }: {
   title: string;
   value: string;

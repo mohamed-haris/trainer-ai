@@ -28,17 +28,14 @@ export const metadata: Metadata = {
 };
 
 export default function DashboardPage() {
-  // Filter sessions for active training
   const activeTrainings = trainingSessions.filter(
     (session) => session.status === "in_progress"
   );
 
-  // Get a pending evaluation (for demo)
   const pendingEvaluations = evaluationSessions.filter(
     (session) => session.status === "pending"
   );
 
-  // Calculate performance metrics (improvement, etc.)
   const metrics = performanceMetrics.slice(0, 3);
 
   return (

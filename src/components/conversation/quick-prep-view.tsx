@@ -16,7 +16,6 @@ export function QuickPrepView() {
   const [isSessionActive, setIsSessionActive] = useState(false);
   
   useEffect(() => {
-    // Check if agentId is provided in the URL
     const agentId = searchParams.get("agentId");
     if (agentId) {
       setSelectedAgentId(agentId);
@@ -28,7 +27,6 @@ export function QuickPrepView() {
     
     setIsStarting(true);
     
-    // Simulate loading delay
     setTimeout(() => {
       setIsSessionActive(true);
       setIsStarting(false);

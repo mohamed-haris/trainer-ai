@@ -47,7 +47,6 @@ export function IntegrationSettings() {
   const handleSync = (id: string) => {
     setSyncing(id);
     
-    // Simulate sync delay
     setTimeout(() => {
       setSyncing(null);
       

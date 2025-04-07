@@ -31,7 +31,6 @@ export function AgentDetails({ agent }: AgentDetailsProps) {
   const { toast } = useToast();
   
   const handleDelete = () => {
-    // In a real app, this would call an API to delete the agent
     toast({
       title: "Agent deleted",
       description: "The agent has been successfully deleted.",

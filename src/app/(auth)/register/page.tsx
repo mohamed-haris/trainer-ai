@@ -54,7 +54,6 @@ export default function RegisterPage() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
     
-    // Simulate API call delay
     await new Promise((resolve) => setTimeout(resolve, 1500));
     
     toast({

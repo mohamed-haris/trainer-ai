@@ -3,7 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { performanceMetrics } from "@/lib/mockData";
 
 export function PerformanceCards() {
-  // Get first 3 metrics for display
   const metrics = performanceMetrics.slice(0, 3);
 
   return (

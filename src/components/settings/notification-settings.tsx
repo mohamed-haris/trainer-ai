@@ -53,7 +53,6 @@ export function NotificationSettings() {
   const handleSave = () => {
     setIsLoading(true);
     
-    // Simulate API call delay
     setTimeout(() => {
       toast({
         title: "Notification settings updated",

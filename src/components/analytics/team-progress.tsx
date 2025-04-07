@@ -7,7 +7,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { users } from "@/lib/mockData";
 
 export function TeamProgress() {
-  // Only use the first 5 users
   const teamMembers = users.slice(0, 5);
 
   return (
